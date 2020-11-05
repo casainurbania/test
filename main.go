@@ -7,5 +7,7 @@ import (
 
 func main(){
 	fmt.Printf("%v: %s\n",time.Now(),"compiling....")
-	panic("This is a testing stage failed message.")
+	if time.Now().Unix() %2==0{
+		panic("fault test")
+	}
 }
