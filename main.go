@@ -1,13 +1,6 @@
-package main
+import time
 
-import (
-	"fmt"
-	"time"
-)
-
-func main(){
-	fmt.Printf("%v: %s\n",time.Now(),"compiling....")
-	if time.Now().Unix() %2==0{
-		panic("fault test")
-	}
-}
+if __name__ == '__main__':
+    time_stamp = int(time.time())
+    if time_stamp % 2 == 0:
+        raise Exception(print("ops!"))
